@@ -32,13 +32,13 @@ function startGame(){
     createSnake();
 
     let snakeX = snake[0].x;
-    let snakey = snake[0].y;
+    let snakeY = snake[0].y;
 
 
-    if (direction == 'right') snake += box;
-    if (direction == 'left') snake -= box;
+    if (direction == 'right') snakeX += box;
+    if (direction == 'left') snakeX -= box;
     if (direction == 'up') snakeY -= box;
-    if (direction == 'down') snake += box;
+    if (direction == 'down') snakeY += box;
 
     snake.pop()
 
