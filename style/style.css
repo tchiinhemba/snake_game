@@ -1,3 +1,11 @@
 body{
-    
-}
+
+    height: 95vh;
+    width: 99%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: gold;
+} 
