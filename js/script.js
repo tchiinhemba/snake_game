@@ -12,6 +12,11 @@ snake[0] = {
 
 let direction = 'right';
 
+let food = {
+    x: Math.floor(Math.random() * 15 + 1) * box,
+    y: Math.floor(Math.random() * 15 + 1) * box
+}
+
 function createBG(){
     context.fillStyle = 'lightgreen';
     context.fillRect(0, 0,  16 * box, 16 * box);
@@ -23,6 +28,12 @@ function createSnake(){
         context.fillStyle = 'green';
         context.fillRect(snake[i].x, snake[i].y, box, box);
     }
+}
+
+function drawFood(){
+
+    context.fillStyle = 'red';
+    context.fillRect(0, 0, 16 *box, 16 * box);
 }
 
 document.addEventListener('keydown', update);
