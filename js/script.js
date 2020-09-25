@@ -67,6 +67,17 @@ function startGame(){
     if (direction == 'up') snakeY -= box;
     if (direction == 'down') snakeY += box;
 
+    if (snakeX != food.x || snakeY != food.y){
+        snake.pop();
+
+    } else{
+
+        x: Math.floor(Math.random() * 15 + 1) * box;
+        y: Math.floor(Math.random() * 15 + 1) * box;
+
+
+    }
+
     snake.pop()
 
     let newHead = {
