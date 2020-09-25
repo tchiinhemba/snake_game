@@ -33,7 +33,7 @@ function createSnake(){
 function drawFood(){
 
     context.fillStyle = 'red';
-    context.fillRect(0, 0, 16 *box, 16 * box);
+    context.fillRect(food.x, food.y, box, box);
 }
 
 document.addEventListener('keydown', update);
@@ -56,6 +56,7 @@ function startGame(){
 
     createBG();
     createSnake();
+    drawFood(); 
 
     let snakeX = snake[0].x;
     let snakeY = snake[0].y;
